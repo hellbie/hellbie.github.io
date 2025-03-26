@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELLIES AWESOM WEBSITE</title>
+    <style>
+        .awesomemode {
+            background-color: black;
+            color: white;
+        }
+
+        .marquee {
+            animation: marquee 5s linear infinite;
+        }
+
+        #seriousblock {
+            display: flex;
+            justify-content: center;
+            background-color: purple;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: black;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate(100%, 0);
+            }
+
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>warning if you click the button music will play so kepe that in mind;</p>
+    <button
+        onclick="document.getElementById('main').style.display = 'block'; document.getElementById('robotrock').play(); document.getElementById('robotrock').volume = 0.2; document.body.classList = 'awesomemode'">click
+        here to ENTER MY AWESOME WEBSITE</button>
+    <audio id="robotrock" src="robotcock.wav" loop></audio>
+    <div id="main" style="display: none;">
+        <button onclick="document.getElementById('robotrock').volume = 0;">mute</button>
+        <button onclick="document.getElementById('robotrock').volume = 0.2;">unmute</button>
+        <p style="font-size: 200px;" class="marquee">
+                IM GAY
+        </p>
+        <p>hi im hellbie. my name is hellbei. hello</p>
+        <img src="hellbie.gif">
+        <p>im musician. i make website too. i also make video game</p>
+        <p>i write too sometimes!!</p>
+        <div id="seriousblock">
+            <div style="width: 600px; background-color: palegoldenrod; padding: 5px;">
+                if you want to contact me. you can do that
+            </div>
+
+        </div>
+        <h1>AWESOME FUCKING CAT</h1>
+        <img src="cardboardcutout.png">
+    </div>
+</body>
+
+</html>
