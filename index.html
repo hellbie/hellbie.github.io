@@ -3,63 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELLIES AWESOM WEBSITE</title>
+    <title>WIP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
     <style>
-        .awesomemode {
-            background-color: black;
-            color: white;
+        @font-face {
+            font-family: "ACP";
+            src: url("AcPlus_ToshibaTxL1_8x16.ttf") format("truetype");
         }
 
-        .marquee {
-            animation: marquee 5s linear infinite;
+        .stalinist-one-regular {
+            font-family: "Stalinist One", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
-        #seriousblock {
+        :root {
+            --push: -20vw;
+        }
+
+        @media only screen and (max-width: 800px) {
+            :root {
+                --push: -60vw;
+            }
+        }
+
+        body {
+            image-rendering: pixelated;
+            background: url(background.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            margin: 0;
+            overflow: hidden;
             display: flex;
             justify-content: center;
-            background-color: purple;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            color: black;
+            align-items: center;
         }
 
-        @keyframes marquee {
+        .scrollingText {
+            translate: 0px -100vh;
+            position: absolute;
+            color: white;
+            white-space: nowrap;
+            width: fit-content;
+            height: fit-content;
+            writing-mode: vertical-rl;
+            text-orientation: sideways;
+            font-size: 10vh;
+            pointer-events: none;
+            animation: marqueeY 60s infinite;
+            animation-timing-function: linear;
+        }
+
+        .scrollingText::selection {
+            background: transparent;
+        }
+
+        .mainBox {
+            width: 90%;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 2px inset #ff6400;
+            outline: 2px outset #ff6400;
+            height: 90vh;
+            top: 5vh;
+            z-index: 4;
+        }
+
+        .digitalTorment {
+            width: 80vw;
+            height: 30vh;
+            background: url(digitaltorment.svg);
+            position: absolute;
+            right: var(--push);
+            bottom: -15vh;
+            rotate: -45deg;
+            animation: marqueeWeird 60s infinite;
+            animation-timing-function: linear;
+        }
+
+        .digitalTormentTransAndSmall {
+            width: 80vw;
+            height: 30vh;
+            opacity: 0.5;
+            background: url(digitaltorment.svg);
+            position: absolute;
+            background-size: contain;
+            right: var(--push);
+            bottom: -15vh;
+            rotate: -45deg;
+            translate: 2vw 2vh;
+            animation: marqueeWeird 40s infinite;
+            animation-timing-function: linear;
+        }
+
+        .digitalTormentBg {
+            border: 5px solid black;
+            outline: 2px solid #ff6400;
+            width: 80vw;
+            height: 50vh;
+            opacity: 1;
+            background: url(digital.png);
+            position: absolute;
+            background-size: contain;
+            right: var(--push);
+            bottom: -35vh;
+            rotate: -45deg;
+            translate: 2vw 2vh;
+            scale: 1.3;
+            animation: marqueeWeird 240s infinite;
+            animation-timing-function: linear;
+            z-index: -1;
+        }
+
+        .digitalTormentBg:before {
+            content: "HELLBIE";
+            width: 100vw;
+            text-align: center;
+            color: white;
+            font-size: 5vw;
+            font-family: "ACP";
+            position: absolute;
+            z-index: 9;
+            translate: 3vw -6vh;
+        }
+
+        @keyframes marqueeY {
             0% {
-                transform: translate(100%, 0);
+                translate: 0px -50%;
             }
 
             100% {
-                transform: translate(-100%, 0);
+                translate: 0px 0%;
+            }
+        }
+
+        @keyframes marqueeWeird {
+            0% {
+                background-position: -100% -100%;
+            }
+
+            100% {
+                background-position: 100% 100%;
             }
         }
     </style>
 </head>
 
 <body>
-    <p>warning if you click the button music will play so kepe that in mind;</p>
-    <button
-        onclick="document.getElementById('main').style.display = 'block'; document.getElementById('robotrock').play(); document.getElementById('robotrock').volume = 0.2; document.body.classList = 'awesomemode'">click
-        here to ENTER MY AWESOME WEBSITE</button>
-    <audio id="robotrock" src="robotcock.wav" loop></audio>
-    <div id="main" style="display: none;">
-        <button onclick="document.getElementById('robotrock').volume = 0;">mute</button>
-        <button onclick="document.getElementById('robotrock').volume = 0.2;">unmute</button>
-        <p style="font-size: 200px;" class="marquee">
-                IM GAY
-        </p>
-        <p>hi im hellbie. my name is hellbei. hello</p>
-        <img src="hellbie.gif">
-        <p>im musician. i make website too. i also make video game</p>
-        <p>i write too sometimes!!</p>
-        <div id="seriousblock">
-            <div style="width: 600px; background-color: palegoldenrod; padding: 5px;">
-                if you want to contact me. you can do that
-            </div>
-
-        </div>
-        <h1>AWESOME FUCKING CAT</h1>
-        <img src="cardboardcutout.png">
-    </div>
+    <div class="scrollingText stalinist-one-regular" style="z-index: 3; left:0vw; top:0vh;">ELECTRIC CRIES FILL THE AIR
+        WE ARE ALL DEAD AND WE ALL KNOW IT ELECTRIC CRIES FILL THE
+        AIR WE ARE ALL DEAD AND WE ALL KNOW IT</div>
+    <div class="scrollingText stalinist-one-regular" style="top:0.5vh; left:0.5vw; z-index: 2; color: black; ">ELECTRIC
+        CRIES FILL THE AIR WE ARE ALL DEAD AND WE ALL KNOW IT ELECTRIC CRIES FILL THE
+        AIR WE ARE ALL DEAD AND WE ALL KNOW IT</div>
+    <div class="scrollingText stalinist-one-regular" style="top:1vh; left:1vw; z-index: 1; color: #ff640064; ">ELECTRIC
+        CRIES FILL THE AIR WE ARE ALL DEAD AND WE ALL KNOW IT ELECTRIC CRIES FILL THE
+        AIR WE ARE ALL DEAD AND WE ALL KNOW IT</div>
+        <div class="digitalTorment"></div>
+        <div class="digitalTormentTransAndSmall"></div>
+        <div class="digitalTormentBg"></div>
 </body>
 
 </html>
