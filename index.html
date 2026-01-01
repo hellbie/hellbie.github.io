@@ -3,168 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WIP</title>
+    <title>Ellie Near</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: "ACP";
-            src: url("AcPlus_ToshibaTxL1_8x16.ttf") format("truetype");
-        }
-
-        .stalinist-one-regular {
-            font-family: "Stalinist One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-
-        :root {
-            --push: -20vw;
-        }
-
-        @media only screen and (max-width: 800px) {
-            :root {
-                --push: -60vw;
-            }
-        }
-
-        body {
-            image-rendering: pixelated;
-            background: url(background.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: top center;
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .scrollingText {
-            translate: 0px -100vh;
-            position: absolute;
-            color: white;
-            white-space: nowrap;
-            width: fit-content;
-            height: fit-content;
-            writing-mode: vertical-rl;
-            text-orientation: sideways;
-            font-size: 10vh;
-            pointer-events: none;
-            animation: marqueeY 60s infinite;
-            animation-timing-function: linear;
-        }
-
-        .scrollingText::selection {
-            background: transparent;
-        }
-
-        .mainBox {
-            width: 90%;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 2px inset #ff6400;
-            outline: 2px outset #ff6400;
-            height: 90vh;
-            top: 5vh;
-            z-index: 4;
-        }
-
-        .digitalTorment {
-            width: 80vw;
-            height: 30vh;
-            background: url(digitaltorment.svg);
-            position: absolute;
-            right: var(--push);
-            bottom: -15vh;
-            rotate: -45deg;
-            animation: marqueeWeird 60s infinite;
-            animation-timing-function: linear;
-        }
-
-        .digitalTormentTransAndSmall {
-            width: 80vw;
-            height: 30vh;
-            opacity: 0.5;
-            background: url(digitaltorment.svg);
-            position: absolute;
-            background-size: contain;
-            right: var(--push);
-            bottom: -15vh;
-            rotate: -45deg;
-            translate: 2vw 2vh;
-            animation: marqueeWeird 40s infinite;
-            animation-timing-function: linear;
-        }
-
-        .digitalTormentBg {
-            border: 5px solid black;
-            outline: 2px solid #ff6400;
-            width: 80vw;
-            height: 50vh;
-            opacity: 1;
-            background: url(digital.png);
-            position: absolute;
-            background-size: contain;
-            right: var(--push);
-            bottom: -35vh;
-            rotate: -45deg;
-            translate: 2vw 2vh;
-            scale: 1.3;
-            animation: marqueeWeird 240s infinite;
-            animation-timing-function: linear;
-            z-index: -1;
-        }
-
-        .digitalTormentBg:before {
-            content: "HELLBIE";
-            width: 100vw;
-            text-align: center;
-            color: white;
-            font-size: 5vw;
-            font-family: "ACP";
-            position: absolute;
-            z-index: 9;
-            translate: 3vw -6vh;
-        }
-
-        @keyframes marqueeY {
-            0% {
-                translate: 0px -50%;
-            }
-
-            100% {
-                translate: 0px 0%;
-            }
-        }
-
-        @keyframes marqueeWeird {
-            0% {
-                background-position: -100% -100%;
-            }
-
-            100% {
-                background-position: 100% 100%;
-            }
-        }
-    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Stardos+Stencil:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="pagelogic.css">
+    <link rel="stylesheet" href="award.css">
+    <link rel="stylesheet" href="player.css">
+    <link rel="shortcut icon" href="favico.png" type="image/png">
 </head>
 
 <body>
-    <div class="scrollingText stalinist-one-regular" style="z-index: 3; left:0vw; top:0vh;">ELECTRIC CRIES FILL THE AIR
-        WE ARE ALL DEAD AND WE ALL KNOW IT ELECTRIC CRIES FILL THE
-        AIR WE ARE ALL DEAD AND WE ALL KNOW IT</div>
-    <div class="scrollingText stalinist-one-regular" style="top:0.5vh; left:0.5vw; z-index: 2; color: black; ">ELECTRIC
-        CRIES FILL THE AIR WE ARE ALL DEAD AND WE ALL KNOW IT ELECTRIC CRIES FILL THE
-        AIR WE ARE ALL DEAD AND WE ALL KNOW IT</div>
-    <div class="scrollingText stalinist-one-regular" style="top:1vh; left:1vw; z-index: 1; color: #ff640064; ">ELECTRIC
-        CRIES FILL THE AIR WE ARE ALL DEAD AND WE ALL KNOW IT ELECTRIC CRIES FILL THE
-        AIR WE ARE ALL DEAD AND WE ALL KNOW IT</div>
-        <div class="digitalTorment"></div>
-        <div class="digitalTormentTransAndSmall"></div>
-        <div class="digitalTormentBg"></div>
+    <div class="parallellines">
+        <div class="tnn" style="position: absolute; rotate: 0deg; height: 80px;"></div>
+        <div class="tnn">
+            <div class="title">HELLBIE</div>
+            <div class="nbwrapper">
+                <div class="navbar">
+                    <div class="navel"><a href="#about">ABOUT</a></div>
+                    <div class="navel"><a href="#works">WORKS</a></div>
+                    <div class="navel"><a href="#awards">AWARDS</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="pageWrapper">
+                <div class="pageLogic" id="aboutme">
+                    <p style="text-align: center;">Hello. Welcome to my site! I am Ellie Near.</p>
+                    <p>I am a trans girl. I am a musician, writer, artist, web developer, game developer, engineer and hobbyist of a lot of other things. I love modding games, and I am currently creating a Quake mod, making soundtracks for multiple video games and writing a TTRPG with a friend.</p>
+                    <p>You can see my works and take a look around on this website, although it might be kind of barren as of right now as I am in the process of trying to find some of my works that I have not archived proper.</p>
+                    <p>The end goal of this site is to serve as some sort of repository of any productive work I have done, whether it be music, art, writing, etc. If you have any questions or just want to talk to me, contact me on Discord!</p>
+                    <h1>Some Links</h1>
+                    <div style="background-color: #3a3a3a; padding: 20px;">
+                        <h2>Other places where you can find me:</h2>
+                        <p><a target="_blank" rel="noopener noreferrer" id="hYt" href="https://www.youtube.com/@hellbie">Youtube</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer" id="hBsky" href="https://bsky.app/profile/ellienear.bsky.social">Bluesky</a></p>
+                        <p><a target="_blank" rel="noopener noreferrer" id="hBnd" href="https://hellbie.bandcamp.com/">Bandcamp</a></p>
+                        <h2></h2>
+                    </div>
+                </div>
+                <div class="pageLogic" id="works">
+                    <h1>Works</h1>
+                    <p style="text-align: center;">This part of the site is currently a WIP. I will add a lot more to this soon!</p>
+
+                </div>
+                <div class="pageLogic" id="awards">
+                    <h1>Awards</h1>
+                    <p>Throughout my career, I have been nominated for many awards and I even won some of them. Although I do not like sharing these awards in conversation often because I do not want to be perceived as only a sum of my skills, I think it would be a perfect fit for a personal website such as this. I would like to thank every friend, organization and governmental body for seeing me fit for these awards.</p>
+                    
+                    <div class="awardBlock">
+                        <div class="awardImage"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>BKPL Best Electro-Slopper 2025</h3></div>
+                            <div class="awardSubtext"><p>Thank you to my friends at the BKPL for crowning me with the this title. This genuinely means so much to me as a musician.</p></div>
+                        </div>
+                    </div>
+                    <div class="awardBlock">
+                        <div class="awardImage aCoaxion"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>CoaXioN ADHD Medication Grant Recipient 2025</h3></div>
+                            <div class="awardSubtext"><p>After fighting others to death over this nongovernmental grant, I stood the only victor in a puddle of blood.</p></div>
+                        </div>
+                    </div>
+                    <div class="awardBlock">
+                        <div class="awardImage"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>2016 Worm Snorting Championship, Dayton OH (Participant)</h3></div>
+                            <div class="awardSubtext"><p>One of my proudest days on Earth.</p></div>
+                        </div>
+                    </div>
+                    <div class="awardBlock">
+                        <div class="awardImage"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>#1 Bone Marrow Analyst</h3></div>
+                            <div class="awardSubtext"><p>Just an award celebrating my work in pathological analysis as a Bone Marrow Analyst.</p></div>
+                        </div>
+                    </div>
+                    <div class="awardBlock">
+                        <div class="awardImage"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>Most Peculiarly Benevolent Critter</h3></div>
+                            <div class="awardSubtext"><p>As with some of the other awards, I received this award through elimination of other participants.</p></div>
+                        </div>
+                    </div>
+                    <div class="awardBlock">
+                        <div class="awardImage"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>Overall Game of the Year 2025</h3></div>
+                            <div class="awardSubtext"><p>After I sabotaged Clair Obscur Expedition 33, Silksong, Kingdom Come Deliverance 2, Hades 2, Death Stranding 2 and Donkey Kong Bananza to use AI generated slop for assets and thus get disqualified, Geoff Keighley hand delivered this prestigious award to me.</p></div>
+                        </div>
+                    </div>
+                    <div class="awardBlock">
+                        <div class="awardImage"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>Best Movie</h3></div>
+                            <div class="awardSubtext"><p></p></div>
+                        </div>
+                    </div>
+                    <div class="awardBlock">
+                        <div class="awardImage"></div>
+                        <div class="awardInfo">
+                            <div class="awardTitle"><h3>Best Meower</h3></div>
+                            <div class="awardSubtext"><p></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="secondaryBg">
+        <div class="bgAmb"></div>
+        <div class="bgAmbText"></div>
+    </div>
+    <div class="digitalTormentBg">
+        <div class="bg"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+    </div>
 </body>
 
 </html>

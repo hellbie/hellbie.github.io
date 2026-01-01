@@ -1,0 +1,15 @@
+.pageLogic {
+    display: none;
+}
+
+.pageLogic#aboutme {
+    display: block;
+}
+
+.pageLogic:target {
+    display: block;
+}
+
+.page:has(.pageLogic:target) #aboutme {
+    display: none;
+}

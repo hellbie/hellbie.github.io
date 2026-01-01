@@ -1,0 +1,28 @@
+.awardBlock {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.awardImage {
+    width: 60px;
+    height: 60px;
+    background: url(awards/default.svg);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 20px;
+    padding: 11px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.awardInfo {
+    width: 80%;
+}
+
+.awardImage.aCoaxion {
+    background-image: url(awards/adhd.png);
+    background-size: 90px;
+}
