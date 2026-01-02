@@ -1,5 +1,5 @@
 .awardBlock {
-    height: 120px;
+    height: fit-content;
     display: flex;
     align-items: center;
     margin-bottom: 30px;

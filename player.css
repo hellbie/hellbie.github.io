@@ -1,18 +1,24 @@
 .player {
     display: flex;
     align-items: center;
-    background: #393939;
-    border: 1px solid #ff6400;
-    border-radius: 2px;
-    padding: 5px;
+    background: #686868;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 5px;
     gap: 20px;
 }
 
-.playerTitle {
-    font-family: monospace;
+
+.playerTitle a {
+    font-family: "PT Mono", monospace;
     color: white;
-    text-shadow: black 1px 2px;
+    text-shadow: black 1px 1px;
+    text-transform: uppercase;
     flex: 2;
+}
+
+.playerTitle a:hover {
+    background-color: #ff6400;
 }
 
 .playerProgress {
@@ -37,7 +43,7 @@
     height: 100%;
     aspect-ratio: 1;
     scale: 1.3;
-    background-color: #a3a3a3;
+    background-color: #7d7d7d;
     border-radius: 50px;
     justify-self: center;
     margin-left: 100%;
@@ -53,11 +59,14 @@
 .playerButton {
     background-image: url(icons/play.svg);
     width: 15px;
-    height: 19px;
-    background-size: cover;
+    height: 15px;
+    background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
+    margin-left: 3px;
+    display: flex;
 }
+
 
 .playerButton.pause {
     background-image: url(icons/pause.svg);
