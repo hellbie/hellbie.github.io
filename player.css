@@ -8,9 +8,13 @@
     gap: 20px;
 }
 
+.container.playerW h2 {
+    font-family: "ACP";
+    font-weight: 100;
+}
 
 .playerTitle a {
-    font-family: "PT Mono", monospace;
+    font-family: "ACP";
     color: white;
     text-shadow: black 1px 1px;
     text-transform: uppercase;
